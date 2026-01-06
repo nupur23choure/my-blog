@@ -68,3 +68,16 @@ h1, h2, h3, h4, h5, h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+/* Featured jumbotron background image: keep aspect ratio and avoid stretching */
+.jumbotron.bg-dark {
+  background-size: cover;           /* scale image to cover area without distortion */
+  background-position: center center; /* center image to avoid odd cropping */
+  background-repeat: no-repeat;    /* don't tile */
+  min-height: 320px;               /* ensures a consistent area for the image */
+  display: flex;
+  align-items: center;             /* vertically center content */
+}
+
+/* If you prefer the image to fully fit without cropping, use contain instead of cover: */
+/* .jumbotron.bg-dark { background-size: contain; background-position: center center; background-repeat: no-repeat; } */
